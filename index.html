@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transportes JASS | Traslados y Recojos 24/7</title>
+  <meta name="description" content="Transportes JASS: Traslados y recojos al aeropuerto 24/7, servicio ejecutivo, vans y city tours. Formales, facturación electrónica y múltiples medios de pago." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CARGANDO -->
+  <div class="preloader" id="preloader">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <div class="loader-text">Transportes JASS</div>
+    </div>
+  </div>
+
+  <!-- BARRA NAV -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="#inicio" class="brand" aria-label="Transportes JASS">
+        <img src="img/logo.jpg" alt="Transportes JASS" class="brand__logo">
+        <span class="brand__text">Transportes <b>JASS</b></span>
+      </a>
+
+      <nav class="menu" id="main-menu" aria-label="Navegación principal">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#presentacion">Nosotros</a>
+        <a href="#especificaciones">Especificaciones</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#calculadora">Precios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#reserva">Reserva</a>
+      </nav>
+
+      <div class="actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+        <button id="menu-toggle" class="icon-btn burger" aria-label="Abrir menú" title="Menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <div class="hero__veil"></div>
+  
+  <!-- Controles de navegación -->
+  <div class="hero__controls">
+    <button class="hero__nav hero__nav--prev" id="hero-prev">‹</button>
+    <button class="hero__nav hero__nav--next" id="hero-next">›</button>
+  </div>
+  
+  <!-- Indicadores de imagen -->
+  <div class="hero__indicators">
+    <button class="hero__dot active" data-slide="0"></button>
+    <button class="hero__dot" data-slide="1"></button>
+    <button class="hero__dot" data-slide="2"></button>
+  </div>
+  
+  <div class="container hero__content">
+    <h1>Transportes JASS</h1>
+    <p>Traslados y recojos en autos premium al aeropuerto las 24 horas.</p>
+    <div class="hero__btns">
+      <a href="https://wa.me/51910410148" target="_blank" rel="noopener" class="btn btn--whatsapp">💬 WhatsApp</a>
+      <a href="#calculadora" class="btn btn--light">💰 Calcular Precio</a>
+      <a href="#reserva" class="btn btn--secondary">📅 Reservar</a>
+    </div>
+  </div>
+</section>
+
+  <!-- PRESENTACIÓN -->
+  <section id="presentacion" class="presentacion section">
+    <div class="container">
+      <div class="presentacion__head">
+        <h2>¿Planeando un viaje?</h2>
+        <p><b>Transportes JASS</b> — Tu opción más segura.</p>
+        <p>Confía en nuestra empresa la seguridad de tus colaboradores y/o familia.</p>
+      </div>
+
+      <div class="grid four">
+        <article class="info-card">
+          <div class="info-card__icon">🇵🇪</div>
+          <h3>Empresa peruana 100% formal</h3>
+          <p>Más de 10 años en el mercado brindando un servicio responsable.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card__icon">❄️</div>
+          <h3>Flota modernas con A/C</h3>
+          <p>Flota renovada, cómoda y segura para cada trayecto.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card__icon">🧾</div>
+          <h3>Facturación electrónica</h3>
+          <p>Emitimos comprobantes electrónicos para tu tranquilidad.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card__icon">💳</div>
+          <h3>Medios de pago flexibles</h3>
+          <p>Efectivo, transferencias, tarjetas y Yape/Plin.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIFICACIONES -->
+  <section id="especificaciones" class="section alt">
+    <div class="container">
+      <header class="section__head">
+        <h2>Especificaciones</h2>
+        <p>Más de una forma de llegar con tranquilidad: 4 categorías que se acomodan a tus necesidades.</p>
+      </header>
+
+      <div class="grid four cards">
+        <article class="card">
+          <img src="img/sedan.png" alt="Lite - sedán clásico y seguro" />
+          <h3>Lite</h3>
+          <p>Un auto sedán, clásico y seguro.</p>
+          <ul class="bullets">
+            <li>2 maletas + 1 carry on</li>
+            <li>4 pasajeros</li>
+          </ul>
+          <div class="price-tag">Desde S/ 25</div>
+          <button class="btn reservar-btn" data-vehiculo="Lite">Reservar por WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <img src="img/comfort.png" alt="Comfort - autos de último modelo" />
+          <h3>Comfort</h3>
+          <p>Autos de último modelo y más cómodos.</p>
+          <ul class="bullets">
+            <li>2 maletas + 1 carry on</li>
+            <li>4 pasajeros</li>
+          </ul>
+          <div class="price-tag">Desde S/ 35</div>
+          <button class="btn reservar-btn" data-vehiculo="Comfort">Reservar por WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <img src="img/XL.png" alt="XL - SUV espacioso" />
+          <h3>XL</h3>
+          <p>Un SUV con más espacio al interior.</p>
+          <ul class="bullets">
+            <li>4 maletas</li>
+            <li>4 pasajeros</li>
+          </ul>
+          <div class="price-tag">Desde S/ 45</div>
+          <button class="btn reservar-btn" data-vehiculo="XL">Reservar por WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <img src="img/van.png" alt="Van - espacio para toda la familia" />
+          <h3>Van</h3>
+          <p>Para toda la familia y su equipaje.</p>
+          <ul class="bullets">
+            <li>8 maletas</li>
+            <li>7 pasajeros</li>
+          </ul>
+          <div class="price-tag">Desde S/ 60</div>
+          <button class="btn reservar-btn" data-vehiculo="Van">Reservar por WhatsApp</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2>Servicios</h2>
+        <p>Privado y personalizado, dentro de Lima y a nivel nacional.</p>
+      </header>
+
+      <div class="grid two services">
+        <ul class="service-list">
+          <li>🚖 Taxi Ejecutivo / Traslados de Pasajeros</li>
+          <li>🛫 Taxi Aeropuerto 24 Horas</li>
+          <li>🚐 Taxi Van, Minivan, Sprinter</li>
+          <li>🏙️ Taxi Turístico — City Tours</li>
+        </ul>
+        <div class="service-text">
+          <p>Ofrecemos un servicio de gama media y alta, con conductores profesionales, personal comprometido y unidades modernas para un viaje seguro, puntual y confortable.</p>
+          <ul class="tags">
+            <li>✨ Servicio Premium</li>
+            <li>🤝 Profesionalismo</li>
+            <li>🧑‍✈️ Conductor experto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE PRECIOS -->
+<section id="calculadora" class="section alt">
+  <div class="container">
+    <header class="section__head">
+      <h2>Calcula tus Viajes</h2>
+      <p>Estima el costo de tu viaje según el destino y tipo de vehículo.</p>
+    </header>
+
+    <div class="calculator-container">
+      <div class="calculator">
+        <div class="calc-row">
+          <select id="calc-origen" class="calc-input">
+            <option value="">Selecciona origen</option>
+            <option value="aeropuerto">Aeropuerto Jorge Chávez</option>
+            <option value="miraflores">Miraflores</option>
+            <option value="san-isidro">San Isidro</option>
+            <option value="surco">Surco</option>
+            <option value="la-molina">La Molina</option>
+            <option value="barranco">Barranco</option>
+            <option value="callao">Callao</option>
+            <option value="san-borja">San Borja</option>
+            <option value="surco-viejo">Surco Viejo</option>
+            <option value="magdalena">Magdalena</option>
+            <option value="san-miguel">San Miguel</option>
+            <option value="pueblo-libre">Pueblo Libre</option>
+            <option value="jesus-maria">Jesús María</option>
+            <option value="lince">Lince</option>
+            <option value="lima-centro">Lima Centro</option>
+            <option value="breña">Breña</option>
+            <option value="la-victoria">La Victoria</option>
+            <option value="rimac">Rímac</option>
+            <option value="ate">Ate</option>
+            <option value="santa-anita">Santa Anita</option>
+            <option value="el-agustino">El Agustino</option>
+            <option value="sjl">San Juan de Lurigancho</option>
+            <option value="comas">Comas</option>
+            <option value="independencia">Independencia</option>
+            <option value="los-olivos">Los Olivos</option>
+            <option value="san-martin-porres">San Martín de Porres</option>
+            <option value="carabayllo">Carabayllo</option>
+          </select>
+          
+          <select id="calc-destino" class="calc-input">
+            <option value="">Selecciona destino</option>
+            <option value="aeropuerto">Aeropuerto Jorge Chávez</option>
+            <option value="miraflores">Miraflores</option>
+            <option value="san-isidro">San Isidro</option>
+            <option value="surco">Surco</option>
+            <option value="la-molina">La Molina</option>
+            <option value="barranco">Barranco</option>
+            <option value="callao">Callao</option>
+            <option value="san-borja">San Borja</option>
+            <option value="surco-viejo">Surco Viejo</option>
+            <option value="magdalena">Magdalena</option>
+            <option value="san-miguel">San Miguel</option>
+            <option value="pueblo-libre">Pueblo Libre</option>
+            <option value="jesus-maria">Jesús María</option>
+            <option value="lince">Lince</option>
+            <option value="lima-centro">Lima Centro</option>
+            <option value="breña">Breña</option>
+            <option value="la-victoria">La Victoria</option>
+            <option value="rimac">Rímac</option>
+            <option value="ate">Ate</option>
+            <option value="santa-anita">Santa Anita</option>
+            <option value="el-agustino">El Agustino</option>
+            <option value="sjl">San Juan de Lurigancho</option>
+            <option value="comas">Comas</option>
+            <option value="independencia">Independencia</option>
+            <option value="los-olivos">Los Olivos</option>
+            <option value="san-martin-porres">San Martín de Porres</option>
+            <option value="carabayllo">Carabayllo</option>
+          </select>
+        </div>
+        
+        <div class="calc-row">
+          <select id="calc-vehiculo" class="calc-input">
+            <option value="">Tipo de vehículo</option>
+            <option value="lite">Lite (4 pasajeros)</option>
+            <option value="comfort">Comfort (4 pasajeros)</option>
+            <option value="xl">XL (4 pasajeros)</option>
+            <option value="van">Van (7 pasajeros)</option>
+          </select>
+          <button id="calc-btn" class="btn">Calcular</button>
+        </div>
+        
+        <div id="calc-result" class="calc-result"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>Testimonios reales de personas que confían en nosotros.</p>
+      </header>
+
+      <div class="testimonials-container">
+        <div class="testimonials" id="testimonials">
+          <div class="testimonial active">
+            <div class="testimonial__content">
+              <p>"Excelente servicio, muy puntual y el vehículo impecable. Los recomiendo totalmente para traslados al aeropuerto."</p>
+            </div>
+            <div class="testimonial__author">
+              <strong>María González</strong>
+              <span>Ejecutiva de Marketing</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__content">
+              <p>"Viajé con mi familia en la van y el espacio fue perfecto. Conductor muy amable y profesional."</p>
+            </div>
+            <div class="testimonial__author">
+              <strong>Carlos Mendoza</strong>
+              <span>Padre de familia</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__content">
+              <p>"Uso sus servicios para traslados corporativos. Siempre puntuales y con facturación electrónica."</p>
+            </div>
+            <div class="testimonial__author">
+              <strong>Ana Rodríguez</strong>
+              <span>Gerente Comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-nav">
+          <button class="testimonial-btn active" data-slide="0"></button>
+          <button class="testimonial-btn" data-slide="1"></button>
+          <button class="testimonial-btn" data-slide="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section id="estadisticas" class="section alt">
+    <div class="container stats">
+      <div class="stat"><h3 est-dinamico="800">0</h3><p>Clientes Atendidos</p></div>
+      <div class="stat"><h3 est-dinamico="1200">0</h3><p>Viajes Realizados</p></div>
+      <div class="stat"><h3 est-dinamico="315">0</h3><p>Eventos</p></div>
+      <div class="stat"><h3 est-dinamico="8">0</h3><p>Empresas</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos las dudas más comunes sobre nuestros servicios.</p>
+      </header>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cómo puedo reservar un servicio?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Puedes reservar a través de nuestro formulario web, por WhatsApp al 910 410 148, o llamando directamente. Te recomendamos reservar con al menos 2 horas de anticipación.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué métodos de pago aceptan?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Aceptamos efectivo, transferencias bancarias, tarjetas de crédito/débito, Yape y Plin. También emitimos facturación electrónica.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Los precios incluyen peajes y combustible?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, nuestros precios incluyen combustible. Los peajes se cobran por separado según la ruta a tomar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Tienen servicio las 24 horas?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, ofrecemos servicio 24 horas los 7 días de la semana, especialmente para traslados al aeropuerto y emergencias.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Puedo cancelar mi reserva?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, puedes cancelar tu reserva hasta 1 hora antes del servicio sin costo adicional. Para cancelaciones de último minuto puede aplicar una penalidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVA -->
+  <section id="reserva" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2>Reserva tu traslado</h2>
+        <p>Completa tus datos y te atenderemos por WhatsApp.</p>
+      </header>
+
+      <form id="form-reserva" class="form">
+        <div class="form__row">
+          <input type="text" id="nombre" placeholder="Tu nombre completo" required />
+        </div>
+        <div class="form__row two">
+          <input type="date" id="fecha" required />
+          <input type="time" id="hora" required />
+        </div>
+        <div class="form__row two">
+          <input type="text" id="origen" placeholder="Lugar de origen" required />
+          <input type="text" id="destino" placeholder="Lugar de destino" required />
+        </div>
+        <div class="form__row">
+          <input type="tel" id="telefono" placeholder="Número de teléfono" required />
+        </div>
+
+        <div class="form__row vehiculos">
+          <span>Tipo de vehículo:</span>
+          <label><input type="radio" name="vehiculo" value="Lite" required /> Lite</label>
+          <label><input type="radio" name="vehiculo" value="Comfort" /> Comfort</label>
+          <label><input type="radio" name="vehiculo" value="XL" /> XL</label>
+          <label><input type="radio" name="vehiculo" value="Van" /> Van</label>
+        </div>
+
+        <div class="form__row">
+          <textarea id="comentarios" placeholder="Comentarios adicionales (opcional)" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-submit">📱 Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="whatsapp-float" href="https://wa.me/51910410148" target="_blank" rel="noopener" aria-label="WhatsApp JASS">
+    💬
+    <div class="whatsapp-notification">¡Escríbenos!</div>
+  </a>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+    ↑
+  </button>
+
+  <!-- TOAST NOTIFICATIONS -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Transportes JASS — Todos los derechos reservados</p>
+      <p>📞 910 410 148 | 📧 info@transportesjass.com | 📍 Lima, Perú</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
