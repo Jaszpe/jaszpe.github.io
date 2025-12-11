@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Copos de nieve */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bus-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+}
+
+.subtitle {
+    color: #4ecdc4;
+    font-size: 16px;
+}
+
+/* Contador */
+.counter-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.counter-label {
+    color: #ffd166;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.counter-number {
+    font-size: 100px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin: 20px 0;
+    text-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.message {
+    color: #4ecdc4;
+    font-size: 20px;
+    margin: 20px 0;
+    min-height: 30px;
+}
+
+/* Barra de progreso */
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #ff9a00);
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+.progress-text {
+    margin-top: 10px;
+    color: #ffd166;
+    font-weight: bold;
+}
+
+/* Animación del bus */
+.bus-animation {
+    margin: 30px 0;
+    position: relative;
+    height: 80px;
+}
+
+.bus {
+    font-size: 50px;
+    position: absolute;
+    animation: drive 8s infinite linear;
+}
+
+@keyframes drive {
+    0% { left: -50px; transform: scaleX(1); }
+    49% { left: calc(100% + 50px); transform: scaleX(1); }
+    50% { left: calc(100% + 50px); transform: scaleX(-1); }
+    99% { left: -50px; transform: scaleX(-1); }
+    100% { left: -50px; transform: scaleX(1); }
+}
+
+.road {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #ffd166 20%, 
+        #ffd166 80%, 
+        transparent 100%);
+}
+
+/* Sección ganadora */
+.winner-section {
+    background: linear-gradient(135deg, #ffd166, #ff9a00);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: center;
+    animation: winnerGlow 2s infinite alternate;
+}
+
+@keyframes winnerGlow {
+    from { box-shadow: 0 5px 20px rgba(255, 154, 0, 0.3); }
+    to { box-shadow: 0 10px 30px rgba(255, 154, 0, 0.5); }
+}
+
+.trophy {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.winner-section h2 {
+    color: #1a2a3a;
+    margin-bottom: 10px;
+}
+
+.winner-text {
+    color: #1a2a3a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prize {
+    color: #ff6b6b;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Botón */
+.btn {
+    background: #1a2a3a;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #ff6b6b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Información */
+.info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.info h3 {
+    color: #ffd166;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.info li {
+    margin: 10px 0;
+    color: #a5b1c2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info li:before {
+    content: "•";
+    color: #4ecdc4;
+    font-size: 20px;
+}
+
+/* Admin */
+.admin-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.admin-btn {
+    background: rgba(255, 215, 102, 0.2);
+    color: #ffd166;
+    border: 2px solid #ffd166;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.admin-btn:hover {
+    background: #ffd166;
+    color: #1a2a3a;
+}
+
+.admin-panel {
+    margin-top: 20px;
+}
+
+#adminCode {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #4ecdc4;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.admin-controls {
+    margin-top: 15px;
+}
+
+.btn-admin {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-admin:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a5b1c2;
+}
+
+.decorations {
+    margin-top: 10px;
+}
+
+.decorations span {
+    margin: 0 10px;
+    font-size: 20px;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .counter-number {
+        font-size: 70px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Contador Navideño 🚌</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Copos de nieve -->
+    <div class="snowflakes"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="bus-icon">🚌</div>
+            <h1>TRANSPORTES NAVIDAD</h1>
+            <p class="subtitle">¡Viaja con nosotros esta Navidad!</p>
+        </div>
+
+        <!-- Contador -->
+        <div class="counter-section">
+            <div class="counter-label">
+                <i class="fas fa-user"></i>
+                <span>ERES EL PASAJERO NÚMERO</span>
+            </div>
+            
+            <div class="counter-number" id="counter">1</div>
+            
+            <div class="message" id="message">
+                ¡Bienvenido a bordo! 🎄
+            </div>
+            
+            <!-- Progreso hacia 250 -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">(0%)</div>
+            </div>
+            
+            <!-- Mini bus animado -->
+            <div class="bus-animation">
+                <div class="bus">🚌</div>
+                <div class="road"></div>
+            </div>
+        </div>
+
+        <!-- Cuando llega a 250 -->
+        <div class="winner-section" id="winnerSection" style="display: none;">
+            <div class="trophy">🏆</div>
+            <h2>¡FELICIDADES!</h2>
+            <p class="winner-text">Eres el pasajero 250</p>
+            <p class="prize">🎉 ¡¡¡¡GANASTE!!!! 🎉</p>
+            <button onclick="resetCounter()" class="btn">Reiniciar Contador</button>
+        </div>
+
+        <!-- Información -->
+        <div class="info">
+            <h3><i class="fas fa-info-circle"></i> ¿Cómo funciona?</h3>
+            <ul>
+                <li>✅ Cada nuevo visitante aumenta el número</li>
+            </ul>
+        </div>
+
+        <!-- Admin ADMINYORCH -->
+        <div class="admin-section">
+            <button onclick="showAdmin()" class="admin-btn">
+                <i class="fas fa-key"></i> Acceso Administrador
+            </button>
+            <div class="admin-panel" id="adminPanel" style="display: none;">
+                <input type="password" id="adminCode" placeholder="Código de Administrador">
+                <button onclick="checkAdmin()">Verificar</button>
+                <div class="admin-controls" id="adminControls" style="display: none;">
+                    <button onclick="resetAll()" class="btn-admin">
+                        <i class="fas fa-redo"></i> Reiniciar Todo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🎄 Navidad 2025 | ByJasz 🚌</p>
+            <div class="decorations">
+                <span>❄️</span>
+                <span>🎁</span>
+                <span>🦌</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
